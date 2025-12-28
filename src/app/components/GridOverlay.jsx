@@ -50,7 +50,7 @@ export default function GridOverlay() {
     <>
       {/* BASE GRID */}
       <div
-        className="pointer-events-none fixed inset-0 z-40 bg-[#0e100f]"
+        className="h-screen pointer-events-none fixed inset-0 z-0 bg-[#18181b]"
         style={{
           display: "grid",
           gridTemplateColumns: `repeat(${cols}, 1fr)`,
@@ -61,7 +61,7 @@ export default function GridOverlay() {
         {Array.from({ length: cells }).map((_, i) => (
           <div
             key={i}
-            className="border border-neutral-600/10"
+            className="border border-[#292636]/50"
           />
         ))}
       </div>
@@ -69,7 +69,7 @@ export default function GridOverlay() {
       {/* HIGHLIGHT GRID */}
       {!isMobile && (
         <motion.div
-          className="pointer-events-none fixed inset-0 z-50"
+          className="pointer-events-none fixed inset-0 z-0"
           style={{
             display: "grid",
             gridTemplateColumns: `repeat(${cols}, 1fr)`,
